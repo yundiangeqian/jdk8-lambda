@@ -23,26 +23,31 @@ public class Apple implements Serializable {
     }
 
     public int getId() {
-        return id;
+        return this.id;
+    }
+
+    public String getColor() {
+        return this.color;
+    }
+
+    public BigDecimal getWeight() {
+        return this.weight;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     public void setColor(String color) {
         this.color = color;
     }
 
-    public BigDecimal getWeight() {
-        return weight;
-    }
-
     public void setWeight(BigDecimal weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple(id=" + this.getId() + ", color=" + this.getColor() + ", weight=" + this.getWeight() + ")";
     }
 }
